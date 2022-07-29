@@ -30,6 +30,10 @@ app.use(bodyparser.urlencoded({ extended: true }));
 
 
 // test fetching
+
+app.get("/",(req,res)=>{
+    res.send("work");
+});
         
 app.post('/api/user',validateToken,(req, res) => {
     const email = req.body.reg
