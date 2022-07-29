@@ -135,6 +135,6 @@ app.post("/api/Login", (req, res) => {
         });
 });
 
-app.listen(process.env.PORT ||3010, () => {
-    console.log("server sunning");
+app.listen(process.env.PORT, () => {
+    console.log("server running");
 });
