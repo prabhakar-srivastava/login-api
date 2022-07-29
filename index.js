@@ -135,6 +135,6 @@ app.post("/api/Login", (req, res) => {
         });
 });
 
-app.listen(3010, () => {
+app.listen(process.env.PORT ||3010, () => {
     console.log("server sunning");
 });
