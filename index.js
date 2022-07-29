@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 const {sign} = require('jsonwebtoken')
 const {validateToken} =require('./middleWare/middleware')
 const saltround = 10;
+const PORT = 3010
 
 const app = express();
 
@@ -135,6 +136,6 @@ app.post("/api/Login", (req, res) => {
         });
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log("server running");
 });
